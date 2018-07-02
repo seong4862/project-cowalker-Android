@@ -16,7 +16,7 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invite)
 
-
+        //ㅇ
         val view = window.decorView
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (view != null) {
