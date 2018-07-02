@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InviteSecondActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="38dp"
+            android:text="모집하기"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="모집하기"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="19dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            />
+        
+        <EditText
+            android:layout_width="336dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="center"
+            android:background="#eeeeee"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="요구 경력 및 경험"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="19dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            />
+
+        <EditText
+            android:layout_width="336dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="center"
+            android:background="#eeeeee"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="우대사항"
+            android:layout_marginTop="49dp"
+            android:layout_marginLeft="19dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            />
+
+        <EditText
+            android:layout_width="336dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="center"
+            android:background="#eeeeee"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="우대사항"
+            android:layout_marginTop="49dp"
+            android:layout_marginLeft="19dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            />
+
+        <EditText
+            android:layout_width="336dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="center"
+            android:background="#eeeeee"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="질문 1"
+            android:layout_marginTop="68dp"
+            android:layout_marginLeft="19dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            />
+
+        <EditText
+            android:layout_width="336dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="center"
+            android:background="#eeeeee"/>
+        
+        <Button
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:background="@drawable/invite_plus_btn"
+            android:layout_marginTop="13dp"/>
+        
+        <Button
+            android:layout_width="268dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:text="완료"
+            android:layout_marginTop="43dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/create_nextbtn_img"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
