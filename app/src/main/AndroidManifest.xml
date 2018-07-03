@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jemcom.cowalker">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,8 +26,6 @@
         <activity android:name=".InviteActivity" />
         <activity android:name=".Invite2Activity" />
         <activity android:name=".ProjectCreate2Activity" />
-        <activity android:name=".testActivity" />
-        <activity android:name=".Test2Activity"></activity>
     </application>
 
 </manifest>

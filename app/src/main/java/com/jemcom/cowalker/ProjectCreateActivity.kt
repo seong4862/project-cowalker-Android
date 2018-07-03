@@ -78,8 +78,8 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
         when(v){
             create_next_btn -> {
                 // '방생성 버튼' 클릭 시 '초대 액티비티' 호출
+               // val intent = Intent(applicationContext, ProjectCreate2Activity::class.java)
                 val intent = Intent(applicationContext, ProjectCreate2Activity::class.java)
-               // val intent = Intent(applicationContext, Test2Activity::class.java)
                 startActivity(intent)
             }
            create_startup_btn -> {

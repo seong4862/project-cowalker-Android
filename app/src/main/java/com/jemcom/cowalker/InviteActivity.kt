@@ -18,13 +18,17 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invite)
 
+        // 모집 역할 버튼 리스너
         invite_pm_btn.setOnClickListener(this)
         invite_planner_btn.setOnClickListener(this)
         invite_designer_btn.setOnClickListener(this)
         invite_developer_btn.setOnClickListener(this)
         invite_etc_btn.setOnClickListener(this)
 
+        // 다음 버튼 리스너
         invite_next_btn.setOnClickListener(this)
+        // 날짜 선택 버튼 리스너
+        invite_range_tv.setOnClickListener(this)
         //
         val view = window.decorView
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -42,10 +46,6 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
 
     }
     override fun onClick(v: View) {
-
-        // '방생성 버튼' 클릭 시 '방생성 액티비티' 호출
-        //val intent = Intent(applicationContext, InviteSecondActivity::class.java)
-
 
             when(v){
                 invite_pm_btn -> {
@@ -123,6 +123,10 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
                     startActivity(intent)
                 }
 
+                invite_range_tv -> {
+
+
+                }
         }
 
 
