@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import kotlinx.android.synthetic.main.activity_create.*
+import kotlinx.android.synthetic.main.activity_invite.*
 
 class InviteActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -16,6 +18,13 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invite)
 
+        invite_pm_btn.setOnClickListener(this)
+        invite_planner_btn.setOnClickListener(this)
+        invite_designer_btn.setOnClickListener(this)
+        invite_developer_btn.setOnClickListener(this)
+        invite_etc_btn.setOnClickListener(this)
+
+        invite_next_btn.setOnClickListener(this)
         //
         val view = window.decorView
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -29,17 +38,93 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
             window.statusBarColor = Color.BLACK
         }
 
-        createSecondBtn = findViewById<View>(R.id.create_second_btn) as Button
 
-        createSecondBtn!!.setOnClickListener(this)
 
     }
     override fun onClick(v: View) {
 
         // '방생성 버튼' 클릭 시 '방생성 액티비티' 호출
         //val intent = Intent(applicationContext, InviteSecondActivity::class.java)
-        val intent = Intent(applicationContext, InviteSecondActivity::class.java)
-        startActivity(intent)
+
+
+            when(v){
+                invite_pm_btn -> {
+                    invite_pm_btn.setSelected(true)
+                    invite_pm_btn.setTextColor(Color.WHITE)
+
+                    invite_planner_btn.setSelected(false)
+                    invite_planner_btn.setTextColor(Color.BLACK)
+                    invite_designer_btn.setSelected(false)
+                    invite_designer_btn.setTextColor(Color.BLACK)
+                    invite_developer_btn.setSelected(false)
+                    invite_developer_btn.setTextColor(Color.BLACK)
+                    invite_etc_btn.setSelected(false)
+                    invite_etc_btn.setTextColor(Color.BLACK)
+                }
+
+                invite_planner_btn -> {
+                    invite_planner_btn.setSelected(true)
+                    invite_planner_btn.setTextColor(Color.WHITE)
+
+                    invite_pm_btn.setSelected(false)
+                    invite_pm_btn.setTextColor(Color.BLACK)
+                    invite_designer_btn.setSelected(false)
+                    invite_designer_btn.setTextColor(Color.BLACK)
+                    invite_developer_btn.setSelected(false)
+                    invite_developer_btn.setTextColor(Color.BLACK)
+                    invite_etc_btn.setSelected(false)
+                    invite_etc_btn.setTextColor(Color.BLACK)
+                }
+
+                invite_designer_btn -> {
+                    invite_designer_btn.setSelected(true)
+                    invite_designer_btn.setTextColor(Color.WHITE)
+
+                    invite_pm_btn.setSelected(false)
+                    invite_pm_btn.setTextColor(Color.BLACK)
+                    invite_planner_btn.setSelected(false)
+                    invite_planner_btn.setTextColor(Color.BLACK)
+                    invite_developer_btn.setSelected(false)
+                    invite_developer_btn.setTextColor(Color.BLACK)
+                    invite_etc_btn.setSelected(false)
+                    invite_etc_btn.setTextColor(Color.BLACK)
+                }
+
+                invite_developer_btn -> {
+                    invite_developer_btn.setSelected(true)
+                    invite_developer_btn.setTextColor(Color.WHITE)
+
+                    invite_pm_btn.setSelected(false)
+                    invite_pm_btn.setTextColor(Color.BLACK)
+                    invite_planner_btn.setSelected(false)
+                    invite_planner_btn.setTextColor(Color.BLACK)
+                    invite_designer_btn.setSelected(false)
+                    invite_designer_btn.setTextColor(Color.BLACK)
+                    invite_etc_btn.setSelected(false)
+                    invite_etc_btn.setTextColor(Color.BLACK)
+                }
+
+                invite_etc_btn -> {
+                    invite_etc_btn.setSelected(true)
+                    invite_etc_btn.setTextColor(Color.WHITE)
+
+                    invite_pm_btn.setSelected(false)
+                    invite_pm_btn.setTextColor(Color.BLACK)
+                    invite_planner_btn.setSelected(false)
+                    invite_planner_btn.setTextColor(Color.BLACK)
+                    invite_designer_btn.setSelected(false)
+                    invite_designer_btn.setTextColor(Color.BLACK)
+                    invite_developer_btn.setSelected(false)
+                    invite_developer_btn.setTextColor(Color.BLACK)
+                }
+
+                invite_next_btn -> {
+                    val intent = Intent(applicationContext, Invite2Activity::class.java)
+                    startActivity(intent)
+                }
+
+        }
+
 
 
     }

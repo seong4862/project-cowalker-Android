@@ -19,7 +19,10 @@
         </activity>
         <activity android:name=".ProjectCreateActivity" />
         <activity android:name=".InviteActivity" />
-        <activity android:name=".InviteSecondActivity" />
+        <activity android:name=".Invite2Activity" />
+        <activity android:name=".ProjectCreate2Activity" />
+        <activity android:name=".testActivity" />
+        <activity android:name=".Test2Activity"></activity>
     </application>
 
 </manifest>

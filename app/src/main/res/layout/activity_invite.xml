@@ -35,51 +35,57 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="167dp"
+        android:layout_height="200dp"
         android:columnCount="2"
         android:rowCount="5"
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/invite_pm_btn"
             android:layout_width="163dp"
-            android:layout_height="48dp"
+            android:layout_height="56dp"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="14dp"
-            android:background="#eeeeee"
-            android:text="일반"/>
+            android:background="@drawable/selector"
+            android:text="PM"/>
         <Button
+            android:id="@+id/invite_planner_btn"
             android:layout_width="163dp"
-            android:layout_height="48dp"
+            android:layout_height="56dp"
             android:layout_marginTop="8dp"
-            android:background="#eeeeee"
+            android:background="@drawable/selector"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="14dp"
-            android:text="디자이너"/>
+            android:text="기획"/>
 
         <Button
-            android:text="개발자"
+            android:id="@+id/invite_designer_btn"
+            android:text="디자인"
             android:layout_width="163dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="7dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="9dp"
             android:layout_marginLeft="14dp"
-            android:background="#eeeeee"
+            android:background="@drawable/selector"
             />
-        <Button android:text="기획자"
+        <Button
+            android:id="@+id/invite_developer_btn"
+            android:text="개발"
             android:layout_width="163dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="7dp"
-            android:background="#eeeeee"
+            android:layout_height="56dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/selector"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="14dp"
             />
 
         <Button
+            android:id="@+id/invite_etc_btn"
             android:text="기타"
             android:layout_width="163dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="9dp"
             android:layout_marginLeft="14dp"
-            android:background="#eeeeee"
+            android:background="@drawable/selector"
             />
 
 
@@ -236,15 +242,14 @@
 
 
         <Button
-            android:id="@+id/create_second_btn"
+            android:id="@+id/invite_next_btn"
             android:layout_width="268dp"
             android:layout_height="54dp"
             android:layout_marginTop="46dp"
             android:layout_marginBottom="32dp"
-            android:text="완료"
             android:textStyle="bold"
             android:textColor="#444444"
-            android:background="@drawable/create_nextbtn_img"
+            android:background="@drawable/invite_select_btn"
             android:layout_gravity="center"
             />
 

@@ -1,29 +1,32 @@
 package com.jemcom.cowalker;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class InviteSecondActivity extends AppCompatActivity {
+public class Invite2Activity extends AppCompatActivity {
 
     private LinearLayout mLayout;
     private EditText mEditText;
     private Button mButton;
     private EditText edit;
     private Button button;
+    private Button confirmBtn;
     int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_invite_second);
+        setContentView(R.layout.activity_invite2);
 
         View view = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -41,16 +44,24 @@ public class InviteSecondActivity extends AppCompatActivity {
         mLayout = (LinearLayout) findViewById(R.id.linearLayout2);
         mEditText = (EditText) findViewById(R.id.editText2);
         mButton = (Button) findViewById(R.id.button2);
-        // mButton.setOnClickListener(onClick());
-        //button.setOnClickListener(onClick());
-        TextView textView = new TextView(this);
-        textView.setText("New text");
+        confirmBtn = (Button) findViewById(R.id.invite2_confirm_btn);
+
         button = new Button(this);
         count=1;
-        Log.v("Asdf","count값은 "+count);
+
+
+        confirmBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Invite2Activity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
-
             public void onClick(View v) {
                 count+=1;
                 Log.v("Asdf","count값은 "+count);
@@ -58,8 +69,6 @@ public class InviteSecondActivity extends AppCompatActivity {
                 mLayout.addView(createNewTextView(count));
                 mLayout.addView(createNewEditText());
                 mLayout.addView(createNewButton());
-
-
             }
         });
 
@@ -73,7 +82,6 @@ public class InviteSecondActivity extends AppCompatActivity {
                 mLayout.addView(createNewTextView(count));
                 mLayout.addView(createNewEditText());
                 mLayout.addView(createNewButton());
-
             }
         });
 
@@ -82,10 +90,13 @@ public class InviteSecondActivity extends AppCompatActivity {
 
 
     private TextView createNewTextView(int i) {
-        final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        final LinearLayout.LayoutParams tvparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+        tvparams.setMargins(62,50, 0, 0);
         final TextView textView = new TextView(this);
-        textView.setLayoutParams(lparams);
+        textView.setLayoutParams(tvparams);
         textView.setText("질문 " + i);
+        textView.setTextColor(Color.BLACK);
+        textView.setTextSize(16);
 
         return textView;
     }
@@ -93,28 +104,22 @@ public class InviteSecondActivity extends AppCompatActivity {
     private EditText createNewEditText() {
 
 
-        final LinearLayout.LayoutParams lparams2 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        final LinearLayout.LayoutParams editparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 110);
         edit = new EditText(this);
-        lparams2.setMargins(11,13, 13, 0);
+        editparams.setMargins(40,27, 40, 0);
         //lparams2.height=35;
-        edit.setLayoutParams(lparams2);
+        edit.setLayoutParams(editparams);
         edit.setBackgroundColor(this.getResources().getColor(R.color.colorBackground));
 
-        //dd
-        // edit.setLayoutParams(new LinearLayout.LayoutParams(Linear.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        // layout.addView(edict);
         return edit;
     }
 
     private Button createNewButton() {
-
-
-        final LinearLayout.LayoutParams lparams3 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
-        button.setText("질문 추가");
-        lparams3.setMargins(11,13, 13, 0);
-        //lparams2.height=35;
-        button.setLayoutParams(lparams3);
+        final LinearLayout.LayoutParams btnparams = new LinearLayout.LayoutParams(135, 135);
+        btnparams.setMargins(0,30, 0, 0);getActionBar();
+        btnparams.gravity = Gravity.CENTER;
+        button.setLayoutParams(btnparams);
+        button.setBackground(getResources().getDrawable(R.drawable.invite_second_plus_img));
 
         return button;
     }

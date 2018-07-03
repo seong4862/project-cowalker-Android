@@ -4,12 +4,15 @@ import android.content.Intent
 import android.graphics.Color
 import android.location.LocationManager
 import android.os.Build
-import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.ImageButton
+import com.jemcom.cowalker.fragment.AlarmFragment
+import com.jemcom.cowalker.fragment.HomeFragment
+import com.jemcom.cowalker.fragment.MypageFragment
+import com.jemcom.cowalker.fragment.SearchFragment
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 

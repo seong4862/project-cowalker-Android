@@ -51,11 +51,15 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
         create_competition_btn.setOnClickListener(this)
         create_study_btn.setOnClickListener(this)
         create_side_btn.setOnClickListener(this)
+        create_create_btn.setOnClickListener(this)
+        create_etc_btn.setOnClickListener(this)
 
         create_chain_btn.setOnClickListener(this)
         create_iot_btn.setOnClickListener(this)
         create_ai_btn.setOnClickListener(this)
         create_design_btn.setOnClickListener(this)
+        create_contents_btn.setOnClickListener(this)
+        create_subjectetc_btn.setOnClickListener(this)
 
         create_seoul_btn.setOnClickListener(this)
         create_gyeonggi_btn.setOnClickListener(this)
@@ -74,7 +78,8 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
         when(v){
             create_next_btn -> {
                 // '방생성 버튼' 클릭 시 '초대 액티비티' 호출
-                val intent = Intent(applicationContext, InviteActivity::class.java)
+                val intent = Intent(applicationContext, ProjectCreate2Activity::class.java)
+               // val intent = Intent(applicationContext, Test2Activity::class.java)
                 startActivity(intent)
             }
            create_startup_btn -> {
@@ -88,7 +93,10 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
                create_study_btn.setTextColor(Color.BLACK)
                create_side_btn.setSelected(false)
                create_side_btn.setTextColor(Color.BLACK)
-
+               create_create_btn.setSelected(false)
+               create_create_btn.setTextColor(Color.BLACK)
+               create_etc_btn.setSelected(false)
+               create_etc_btn.setTextColor(Color.BLACK)
             }
             create_competition_btn -> {
                 //create_competition_btn.setBackgroundColor((getResources().getColor(R.color.selectedBackground)))
@@ -101,6 +109,10 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
                 create_study_btn.setTextColor(Color.BLACK)
                 create_side_btn.setSelected(false)
                 create_side_btn.setTextColor(Color.BLACK)
+                create_create_btn.setSelected(false)
+                create_create_btn.setTextColor(Color.BLACK)
+                create_etc_btn.setSelected(false)
+                create_etc_btn.setTextColor(Color.BLACK)
             }
             create_study_btn -> {
                 //create_study_btn.setBackgroundColor((getResources().getColor(R.color.selectedBackground)))
@@ -113,6 +125,10 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
                 create_competition_btn.setTextColor(Color.BLACK)
                 create_side_btn.setSelected(false)
                 create_side_btn.setTextColor(Color.BLACK)
+                create_create_btn.setSelected(false)
+                create_create_btn.setTextColor(Color.BLACK)
+                create_etc_btn.setSelected(false)
+                create_etc_btn.setTextColor(Color.BLACK)
             }
             create_side_btn -> {
                 //create_side_btn.setBackgroundColor((getResources().getColor(R.color.selectedBackground)))
@@ -125,6 +141,42 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
                 create_competition_btn.setTextColor(Color.BLACK)
                 create_study_btn.setSelected(false)
                 create_study_btn.setTextColor(Color.BLACK)
+                create_create_btn.setSelected(false)
+                create_create_btn.setTextColor(Color.BLACK)
+                create_etc_btn.setSelected(false)
+                create_etc_btn.setTextColor(Color.BLACK)
+            }
+
+            create_create_btn -> {
+                create_create_btn.setSelected(true)
+                create_create_btn.setTextColor(Color.WHITE)
+
+                create_startup_btn.setSelected(false)
+                create_startup_btn.setTextColor(Color.BLACK)
+                create_competition_btn.setSelected(false)
+                create_competition_btn.setTextColor(Color.BLACK)
+                create_study_btn.setSelected(false)
+                create_study_btn.setTextColor(Color.BLACK)
+                create_side_btn.setSelected(false)
+                create_side_btn.setTextColor(Color.BLACK)
+                create_etc_btn.setSelected(false)
+                create_etc_btn.setTextColor(Color.BLACK)
+            }
+
+            create_etc_btn -> {
+                create_etc_btn.setSelected(true)
+                create_etc_btn.setTextColor(Color.WHITE)
+
+                create_startup_btn.setSelected(false)
+                create_startup_btn.setTextColor(Color.BLACK)
+                create_competition_btn.setSelected(false)
+                create_competition_btn.setTextColor(Color.BLACK)
+                create_study_btn.setSelected(false)
+                create_study_btn.setTextColor(Color.BLACK)
+                create_side_btn.setSelected(false)
+                create_side_btn.setTextColor(Color.BLACK)
+                create_create_btn.setSelected(false)
+                create_create_btn.setTextColor(Color.BLACK)
             }
 
             // 분야 버튼
@@ -138,6 +190,11 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
                 create_ai_btn.setTextColor(Color.BLACK)
                 create_design_btn.setSelected(false)
                 create_design_btn.setTextColor(Color.BLACK)
+                create_contents_btn.setSelected(false)
+                create_contents_btn.setTextColor(Color.BLACK)
+                create_subjectetc_btn.setSelected(false)
+                create_subjectetc_btn.setTextColor(Color.BLACK)
+
             }
             create_iot_btn -> {
                 create_iot_btn.setSelected(true)
@@ -149,6 +206,10 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
                 create_ai_btn.setTextColor(Color.BLACK)
                 create_design_btn.setSelected(false)
                 create_design_btn.setTextColor(Color.BLACK)
+                create_contents_btn.setSelected(false)
+                create_contents_btn.setTextColor(Color.BLACK)
+                create_subjectetc_btn.setSelected(false)
+                create_subjectetc_btn.setTextColor(Color.BLACK)
             }
             create_ai_btn -> {
                 create_ai_btn.setSelected(true)
@@ -160,6 +221,10 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
                 create_iot_btn.setTextColor(Color.BLACK)
                 create_design_btn.setSelected(false)
                 create_design_btn.setTextColor(Color.BLACK)
+                create_contents_btn.setSelected(false)
+                create_contents_btn.setTextColor(Color.BLACK)
+                create_subjectetc_btn.setSelected(false)
+                create_subjectetc_btn.setTextColor(Color.BLACK)
             }
             create_design_btn -> {
                 create_design_btn.setSelected(true)
@@ -171,6 +236,42 @@ class ProjectCreateActivity : AppCompatActivity(), View.OnClickListener {
                 create_iot_btn.setTextColor(Color.BLACK)
                 create_ai_btn.setSelected(false)
                 create_ai_btn.setTextColor(Color.BLACK)
+                create_contents_btn.setSelected(false)
+                create_contents_btn.setTextColor(Color.BLACK)
+                create_subjectetc_btn.setSelected(false)
+                create_subjectetc_btn.setTextColor(Color.BLACK)
+            }
+
+            create_contents_btn -> {
+                create_contents_btn.setSelected(true)
+                create_contents_btn.setTextColor(Color.WHITE);
+
+                create_chain_btn.setSelected(false)
+                create_chain_btn.setTextColor(Color.BLACK)
+                create_iot_btn.setSelected(false)
+                create_iot_btn.setTextColor(Color.BLACK)
+                create_ai_btn.setSelected(false)
+                create_ai_btn.setTextColor(Color.BLACK)
+                create_design_btn.setSelected(false)
+                create_design_btn.setTextColor(Color.BLACK)
+                create_subjectetc_btn.setSelected(false)
+                create_subjectetc_btn.setTextColor(Color.BLACK)
+            }
+
+            create_subjectetc_btn -> {
+                create_subjectetc_btn.setSelected(true)
+                create_subjectetc_btn.setTextColor(Color.WHITE);
+
+                create_chain_btn.setSelected(false)
+                create_chain_btn.setTextColor(Color.BLACK)
+                create_iot_btn.setSelected(false)
+                create_iot_btn.setTextColor(Color.BLACK)
+                create_ai_btn.setSelected(false)
+                create_ai_btn.setTextColor(Color.BLACK)
+                create_contents_btn.setSelected(false)
+                create_contents_btn.setTextColor(Color.BLACK)
+                create_design_btn.setSelected(false)
+                create_design_btn.setTextColor(Color.BLACK)
             }
 
             // 지역

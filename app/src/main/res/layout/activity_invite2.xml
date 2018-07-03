@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InviteSecondActivity">
+    android:background="#FFFFFF"
+    tools:context=".Invite2Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -96,80 +97,54 @@
             android:layout_gravity="center"
             android:background="#eeeeee"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:text="질문 1"
-            android:layout_marginTop="68dp"
-            android:layout_marginLeft="19dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#444444"
-            />
 
-        <EditText
-            android:layout_width="336dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="13dp"
-            android:layout_gravity="center"
-            android:background="#eeeeee"/>
-        
-        <Button
-            android:id="@+id/invite2_add_btn"
-            android:layout_width="46dp"
-            android:layout_height="46dp"
-            android:layout_gravity="center"
-            android:background="@drawable/invite_plus_btn"
-            android:layout_marginTop="13dp"/>
-        
-        <Button
-            android:layout_width="268dp"
-            android:layout_height="54dp"
-            android:layout_gravity="center"
-            android:text="완료"
-            android:layout_marginTop="43dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/create_nextbtn_img"
-            android:textStyle="bold"/>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/linearLayout">
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                />
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add+"
-                />
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/linearLayout2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:text="질문 1"
+                    android:layout_marginTop="68dp"
+                    android:layout_marginLeft="19dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#444444"
+                    />
+
                 <EditText
                     android:id="@+id/editText2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="336dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_gravity="center"
+                    android:background="#eeeeee"
                     />
                 <Button
                     android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add+"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/invite_second_plus_img"
+                    android:layout_marginTop="13dp"
                     />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/invite2_confirm_btn"
+                android:layout_width="268dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="43dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/complete_selector"
+                android:textStyle="bold"/>
+
         </LinearLayout>
 
-
-    </LinearLayout>
 
 </ScrollView>
