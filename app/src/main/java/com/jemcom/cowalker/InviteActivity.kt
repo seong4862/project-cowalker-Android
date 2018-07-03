@@ -38,7 +38,7 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
 
         // '방생성 버튼' 클릭 시 '방생성 액티비티' 호출
         //val intent = Intent(applicationContext, InviteSecondActivity::class.java)
-        val intent = Intent(applicationContext, testActivity::class.java)
+        val intent = Intent(applicationContext, InviteSecondActivity::class.java)
         startActivity(intent)
 
 

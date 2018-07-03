@@ -115,6 +115,7 @@
             android:background="#eeeeee"/>
         
         <Button
+            android:id="@+id/invite2_add_btn"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_gravity="center"
@@ -130,6 +131,43 @@
             android:layout_marginBottom="32dp"
             android:background="@drawable/create_nextbtn_img"
             android:textStyle="bold"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout">
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add+"
+                />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout2">
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add+"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
 
 
     </LinearLayout>
