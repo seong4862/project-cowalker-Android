@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/notosanscjkkr_bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="46dp"
+        android:text="@string/login"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:fontFamily="@font/notosansmonocjkkr_bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="48dp"
+        android:text="이메일" />
+
+    <EditText
+        android:id="@+id/login_email_ed"
+        android:layout_width="269dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="46dp"
+        android:theme="@style/EditTextStyle"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:fontFamily="@font/notosansmonocjkkr_bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="48dp"
+        android:text="비밀번호" />
+
+    <EditText
+        android:id="@+id/login_pw_ed"
+        android:layout_width="269dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="46dp"
+        android:inputType="textPassword"
+        android:theme="@style/EditTextStyle"/>
+
+    <ImageButton
+        android:id="@+id/login_ok_btn"
+        android:layout_width="268dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/login_btn"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/login_auto_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorinfo"
+            android:textSize="16sp"
+            android:fontFamily="@font/notosanscjkkr_bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="141dp"
+            android:text="자동 로그인" />
+
+        <ImageView
+            android:id="@+id/login_check_btn"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_check_blue"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="99.5dp">
+        <TextView
+            android:id="@+id/login_signup_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:fontFamily="@font/notosansmonocjkkr_bold"
+            android:text="회원가입"/>
+
+        <View
+            android:layout_gravity="center"
+            android:layout_marginLeft="20.5dp"
+            android:layout_marginRight="20.5dp"
+            android:layout_width="2dp"
+            android:layout_height="12dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:fontFamily="@font/notosansmonocjkkr_bold"
+            android:text="둘러보기"/>
+    </LinearLayout>
+</LinearLayout>

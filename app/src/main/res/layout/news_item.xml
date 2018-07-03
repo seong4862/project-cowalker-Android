@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/newsitem_profile_cv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:src="@color/colorPrimary"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            >
+
+            <TextView
+                android:paddingRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chatName"
+                android:id="@+id/newsitem_name_tv"
+                android:fontFamily="@font/notosanscjkkr_bold"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"
+                android:textColor="@color/colorPrimaryDark"
+                />
+
+            <TextView
+                android:id="@+id/newsitem_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/notosanscjkkr_regular"
+                android:textColor="@color/colorinfo"
+                android:textSize="10sp"
+                android:text="date"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:id="@+id/newsitem_preview_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/notosanscjkkr_regular"
+            android:text="새 소식이 왔습니다.">
+
+        </TextView>
+    </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent"
+        />
+</LinearLayout>

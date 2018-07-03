@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Cowalker</string>
     <string name="title_activity_test">Sign in</string>
+    <string name="login">"코워커와 함께\n새로운\n여행을 떠나볼까요?"</string>
+    <string name="signup">"코워커의\n일원이 되어보세요!"</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

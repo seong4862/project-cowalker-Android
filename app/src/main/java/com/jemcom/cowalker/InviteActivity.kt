@@ -13,11 +13,11 @@ import kotlinx.android.synthetic.main.activity_invite.*
 class InviteActivity : AppCompatActivity(), View.OnClickListener {
 
     private var createSecondBtn: Button? = null
-
+//ss
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invite)
-
+///dd
         // 모집 역할 버튼 리스너
         invite_pm_btn.setOnClickListener(this)
         invite_planner_btn.setOnClickListener(this)
