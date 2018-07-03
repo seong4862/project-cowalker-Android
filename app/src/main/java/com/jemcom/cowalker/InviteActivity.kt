@@ -13,11 +13,15 @@ import kotlinx.android.synthetic.main.activity_invite.*
 class InviteActivity : AppCompatActivity(), View.OnClickListener {
 
     private var createSecondBtn: Button? = null
-//ss
+    internal lateinit var startZeroMonth: String
+    internal lateinit var startZeroDay: String
+    internal lateinit var finishZeroMonth: String
+    internal lateinit var finishZeroDay: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invite)
-///dd
+
         // 모집 역할 버튼 리스너
         invite_pm_btn.setOnClickListener(this)
         invite_planner_btn.setOnClickListener(this)
@@ -124,6 +128,39 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
                 }
 
                 invite_range_tv -> {
+                    val pd = MyYearMonthPickerDialog()
+                    pd.setOnConfirmDateListener(object : MyYearMonthPickerDialog.OnConfirmDateListener {
+                        override fun onConfirmDateListener(startYear: Int, startMonth: Int, startDay: Int, finishYear: Int, finishMonth: Int, finishDay: Int) {
+                            var startDay = startDay
+                            var finishDay = finishDay
+                            if (startMonth < 10) {
+                                startZeroMonth = "0"+startMonth
+                            } else {
+                                startZeroMonth = Integer.toString(startMonth)
+                            }
+                            if (startDay < 10) {
+                                startDay += 1
+                                startZeroDay = "0"+startDay
+                            } else {
+                                startZeroDay = Integer.toString(startDay + 1)
+                            }
+                            if (finishMonth < 10) {
+                                finishZeroMonth = "0"+finishMonth
+                            } else {
+                                finishZeroMonth = Integer.toString(finishMonth)
+                            }
+                            if (finishDay < 10) {
+                                finishDay += 1
+                                finishZeroDay = "0"+finishDay
+                            } else {
+                                finishZeroDay = Integer.toString(finishDay + 1)
+                            }
+                            val startMonthStr = startYear.toString() + ". " + startZeroMonth + ". " + startZeroDay
+                            val finishMonthStr = finishYear.toString() + ". " + finishZeroMonth + ". " + finishZeroDay
+                            invite_range_tv.setText(startMonthStr + " ~ " + finishMonthStr)
+                        }
+                    })
+                    pd.show(getFragmentManager(), "YearMonthPickerTest")
 
 
                 }
