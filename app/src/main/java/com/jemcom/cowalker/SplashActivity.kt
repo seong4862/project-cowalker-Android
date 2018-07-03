@@ -8,6 +8,7 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Handler
 import android.view.View
+import com.jemcom.cowalker.Activity.LoginActivity
 
 /**
  * Created by JAMCOM on 2018-03-25.
@@ -40,7 +41,7 @@ class SplashActivity : Activity() {
     private inner class splashhandler : Runnable {
         override fun run() {
            // startActivity(Intent(applicationContext, MainActivityKt::class.java))
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+            startActivity(Intent(applicationContext, LoginActivity::class.java))
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out) // fade in, fade out 애니메이션 효과
 
             this@SplashActivity.finish() // 스플래쉬 페이지 액티비티 스택에서 제거

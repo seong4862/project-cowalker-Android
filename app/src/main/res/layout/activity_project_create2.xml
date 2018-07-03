@@ -60,7 +60,7 @@
     <EditText
         android:layout_width="336dp"
         android:layout_height="327dp"
-        android:background="@color/colorBackground"
+        android:background="@color/colorAccent"
         android:hint="팀소개, 주요업무, 자격요건, 팀빌딩 절차, 문의처, 상세정보"
         android:paddingTop="20dp"
         android:paddingLeft="20dp"

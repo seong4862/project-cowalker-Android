@@ -109,7 +109,7 @@ public class Invite2Activity extends AppCompatActivity {
         editparams.setMargins(40,27, 40, 0);
         //lparams2.height=35;
         edit.setLayoutParams(editparams);
-        edit.setBackgroundColor(this.getResources().getColor(R.color.colorBackground));
+        edit.setBackgroundColor(this.getResources().getColor(R.color.colorAccent));
 
         return edit;
     }
