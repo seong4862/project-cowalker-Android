@@ -13,8 +13,18 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class Invite2Activity extends AppCompatActivity {
+import com.kakao.kakaolink.v2.KakaoLinkResponse;
+import com.kakao.kakaolink.v2.KakaoLinkService;
+import com.kakao.message.template.ButtonObject;
+import com.kakao.message.template.ContentObject;
+import com.kakao.message.template.FeedTemplate;
+import com.kakao.message.template.LinkObject;
+import com.kakao.network.ErrorResult;
+import com.kakao.network.callback.ResponseCallback;
+import com.kakao.util.helper.log.Logger;
 
+public class Invite2Activity extends AppCompatActivity {
+    String url = "https://cdn.xl.thumbs.canstockphoto.com/computer-generated-3d-image-cooperation-stock-illustrations_csp2074347.jpg";
     private LinearLayout mLayout;
     private EditText mEditText;
     private Button mButton;
@@ -54,8 +64,9 @@ public class Invite2Activity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Invite2Activity.this, MainActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(Invite2Activity.this, MainActivity.class);
+                //startActivity(intent);
+                sendLink();
             }
         });
 
@@ -99,6 +110,36 @@ public class Invite2Activity extends AppCompatActivity {
         textView.setTextSize(16);
 
         return textView;
+    }
+
+    private void sendLink() {
+        FeedTemplate params = FeedTemplate
+                .newBuilder(ContentObject.newBuilder("공공서비스 어플리케이션 공모전",
+                        url,
+                        LinkObject.newBuilder().setWebUrl("")
+                                .setMobileWebUrl("").build())
+                        .setDescrption("이충엽님이 당신을 추천하셨습니다. 함께 해주세요!")
+                        .build())
+                .addButton(new ButtonObject("깅스앱으로 열기", LinkObject.newBuilder()
+                        .setWebUrl("'https://developers.kakao.com")
+                        .setMobileWebUrl("'https://developers.kakao.com")
+                        .setAndroidExecutionParams("key1=value1")
+                        .setIosExecutionParams("key1=value1")
+                        .build()))
+                .build();
+
+        KakaoLinkService.getInstance().sendDefault(this, params, new ResponseCallback<KakaoLinkResponse>() {
+            @Override
+            public void onFailure(ErrorResult errorResult) {
+                Logger.e(errorResult.toString());
+            }
+
+            @Override
+            public void onSuccess(KakaoLinkResponse result) {
+
+            }
+        });
+
     }
 
     private EditText createNewEditText() {
