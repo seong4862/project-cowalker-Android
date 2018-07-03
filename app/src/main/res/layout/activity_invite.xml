@@ -9,6 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="vertical">
 
     <TextView
@@ -23,7 +25,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="29dp"
         android:textSize="16sp"
         android:text="모집 역할"
         android:layout_marginLeft="19dp"
@@ -33,7 +35,7 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="278dp"
+        android:layout_height="167dp"
         android:columnCount="2"
         android:rowCount="5"
         android:orientation="horizontal">
@@ -54,7 +56,8 @@
             android:layout_marginRight="14dp"
             android:text="디자이너"/>
 
-        <Button android:text="개발자"
+        <Button
+            android:text="개발자"
             android:layout_width="163dp"
             android:layout_height="48dp"
             android:layout_marginTop="7dp"
@@ -70,7 +73,8 @@
             android:layout_marginRight="14dp"
             />
 
-        <Button android:text="기타"
+        <Button
+            android:text="기타"
             android:layout_width="163dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
@@ -96,13 +100,13 @@
             android:layout_height="40dp"
             android:text="날짜 선택"
             android:layout_marginTop="8dp"
-            android:layout_marginLeft="19dp"
-            android:layout_marginRight="19dp"/>
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"/>
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:layout_marginTop="49dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="27dp"
             android:textSize="16sp"
             android:text="모집 인원"
             android:layout_marginLeft="19dp"
@@ -111,21 +115,19 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="41dp"
+            android:layout_height="46dp"
             android:orientation="horizontal">
             
             <EditText
                 android:id="@+id/invite_number_edit"
-                android:layout_width="156dp"
-                android:layout_height="35dp"
+                android:layout_width="295dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="19dp"
-                android:hint="직접 입력"
                 android:gravity="right"
                 android:paddingTop="11dp"
                 android:paddingRight="9dp"
                 android:paddingBottom="5dp"
-                android:textColorHint="#c5c5c5"
                 android:background="#eeeeee"
                 />
 
@@ -135,7 +137,7 @@
                 android:text="명"
                 android:layout_toRightOf="@+id/invite_number_edit"
                 android:layout_alignBottom="@+id/invite_number_edit"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="5dp"
                 android:textSize="16sp"
                 android:textColor="#444444"
@@ -148,19 +150,17 @@
             android:layout_height="24dp"
             android:text="활동"
             android:textStyle="bold"
-            android:layout_marginTop="49dp"
+            android:layout_marginTop="32dp"
             android:layout_marginLeft="19dp"
             />
         
         <EditText
             android:layout_width="336dp"
             android:layout_height="105dp"
-            android:hint="활동에 대한 구체적인 내용을 적어주세요."
             android:gravity="top"
             android:background="#eeeeee"
-            android:textColorHint="#c5c5c5"
             android:textSize="16sp"
-            android:paddingTop="15dp"
+            android:paddingTop="13dp"
             android:paddingLeft="17dp"
             android:paddingRight="66dp"
             android:layout_marginTop="13dp"
@@ -173,17 +173,15 @@
             android:layout_height="24dp"
             android:text="활동 시간 및 기간"
             android:textStyle="bold"
-            android:layout_marginTop="49dp"
+            android:layout_marginTop="32dp"
             android:layout_marginLeft="19dp"
             />
 
         <EditText
             android:layout_width="336dp"
             android:layout_height="105dp"
-            android:hint="활동 시간 및 기간에 대한 구체적인 내용을 적어주세요."
             android:gravity="top"
             android:background="#eeeeee"
-            android:textColorHint="#c5c5c5"
             android:textSize="16sp"
             android:paddingTop="14dp"
             android:paddingLeft="13dp"
@@ -204,10 +202,8 @@
         <EditText
             android:layout_width="336dp"
             android:layout_height="105dp"
-            android:hint="혜택 및 보상에 대한 구체적인 내용을 적어주세요."
             android:gravity="top"
             android:background="#eeeeee"
-            android:textColorHint="#c5c5c5"
             android:textSize="16sp"
             android:paddingTop="15dp"
             android:paddingLeft="13dp"
@@ -219,7 +215,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="24dp"
-            android:text="위치"
+            android:text="활동 위치 (상세주소)"
             android:textStyle="bold"
             android:layout_marginTop="49dp"
             android:layout_marginLeft="19dp"
@@ -227,13 +223,11 @@
 
         <EditText
             android:layout_width="336dp"
-            android:layout_height="35dp"
-            android:hint="위치를 상세히 적어주세요."
+            android:layout_height="40dp"
             android:paddingLeft="13dp"
             android:paddingTop="11dp"
             android:paddingBottom="5dp"
             android:gravity="top"
-            android:textColorHint="#c5c5c5"
             android:textSize="16sp"
             android:background="#eeeeee"
             android:layout_marginTop="13dp"
@@ -245,7 +239,7 @@
             android:id="@+id/create_second_btn"
             android:layout_width="268dp"
             android:layout_height="54dp"
-            android:layout_marginTop="51dp"
+            android:layout_marginTop="46dp"
             android:layout_marginBottom="32dp"
             android:text="완료"
             android:textStyle="bold"

@@ -16,7 +16,7 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invite)
 
-        //ㅇ
+        //
         val view = window.decorView
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (view != null) {
@@ -37,7 +37,8 @@ class InviteActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
 
         // '방생성 버튼' 클릭 시 '방생성 액티비티' 호출
-        val intent = Intent(applicationContext, InviteSecondActivity::class.java)
+        //val intent = Intent(applicationContext, InviteSecondActivity::class.java)
+        val intent = Intent(applicationContext, testActivity::class.java)
         startActivity(intent)
 
 

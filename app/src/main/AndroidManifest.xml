@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".ProjectCreateActivity" />
         <activity android:name=".InviteActivity" />
-        <activity android:name=".InviteSecondActivity"></activity>
+        <activity android:name=".InviteSecondActivity" />
+        <activity android:name=".testActivity"></activity>
     </application>
 
 </manifest>
