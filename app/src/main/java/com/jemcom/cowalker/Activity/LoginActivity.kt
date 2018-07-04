@@ -15,6 +15,8 @@ import com.jemcom.cowalker.Network.NetworkService
 import com.jemcom.cowalker.Network.Post.PostLogin
 import com.jemcom.cowalker.Network.Post.Response.PostLoginResponse
 import com.jemcom.cowalker.R
+import com.jemcom.cowalker.R.id.login_nonmem_tv
+import com.jemcom.cowalker.R.id.login_signup_btn
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
