@@ -1,6 +1,8 @@
 package com.jemcom.cowalker.Activity
 
+import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +24,7 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
     lateinit var networkService: NetworkService
     lateinit var email : String
     lateinit var password : String
+    var auto : Boolean = false
 
     override fun onClick(v: View?) {
         when(v)
@@ -49,11 +52,13 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
                 if(login_auto_txt.textColors.defaultColor != Color.parseColor("#444444")) {
                     login_check_btn.setVisibility(View.VISIBLE)
                     login_auto_txt.setTextColor(Color.parseColor("#444444"))
+                    auto = true
                 }
                 else
                 {
                     login_check_btn.setVisibility(View.INVISIBLE)
                     login_auto_txt.setTextColor(Color.parseColor("#c5c5c5"))
+                    auto=false
                 }
             }
         }
@@ -69,12 +74,19 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
         login_signup_btn.setOnClickListener(this)
 
         networkService = ApplicationController.instance.networkSerVice
+        val pref = applicationContext.getSharedPreferences("auto",Activity.MODE_PRIVATE)
+        val token = pref.getString("token","")
+
+        if(token.length > 0)
+        {
+            var intent = Intent(applicationContext,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun post()
     {
-        System.out.println(email + "하고" + password)
-
         var data = PostLogin(email,password)
         var postLoginResponse = networkService.postLogin(data)
 
@@ -89,6 +101,14 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
                 {
                     if(message.message.equals("login success"))
                     {
+                        if(auto == true)
+                        {
+                            val pref = applicationContext.getSharedPreferences("auto",Activity.MODE_PRIVATE)
+                            var autoLogin : SharedPreferences.Editor = pref.edit()
+                            autoLogin.putString("token", message.token)
+                            autoLogin.commit()
+                        }
+
                         var intent = Intent(applicationContext,MainActivity::class.java)
                         startActivity(intent)
                         finish()
