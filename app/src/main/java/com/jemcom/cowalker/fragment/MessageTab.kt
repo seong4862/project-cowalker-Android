@@ -1,14 +1,17 @@
 package com.jemcom.cowalker.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.jemcom.cowalker.Activity.MessageActivity
 import com.jemcom.cowalker.Adapter.MessageAdapter
 import com.jemcom.cowalker.Item.MessageItem
 import com.jemcom.cowalker.R
+import kotlinx.android.synthetic.main.fragment_message.*
 import kotlinx.android.synthetic.main.fragment_message.view.*
 
 class MessageTab: Fragment(),View.OnClickListener {
@@ -17,6 +20,9 @@ class MessageTab: Fragment(),View.OnClickListener {
     lateinit var messageAdapter : MessageAdapter
 
     override fun onClick(v: View?) {
+        var idx : Int = message_rv.getChildAdapterPosition(v)
+        var intent = Intent(v!!.context, MessageActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

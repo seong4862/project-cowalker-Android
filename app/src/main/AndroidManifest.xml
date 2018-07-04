@@ -29,8 +29,9 @@
         <activity android:name=".Invite2Activity" />
         <activity android:name=".ProjectCreate2Activity" />
         <activity android:name=".Activity.SignupActivity" />
-        <activity android:name=".Activity.Notice_messageActivity"></activity>
-        <activity android:name=".Activity.LoginActivity"></activity>
+        <activity android:name=".Activity.Notice_messageActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.MessageActivity"></activity>
     </application>
 
 </manifest>

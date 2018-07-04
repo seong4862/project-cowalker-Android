@@ -23,8 +23,6 @@ class NewsTab : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
                 var idx : Int = news_rv.getChildAdapterPosition(v)
                 var intent = Intent(v!!.context, Notice_messageActivity::class.java)
-                intent.putExtra("position",idx)
-        Log.d("idx", idx.toString())
                 startActivity(intent)
     }
 
