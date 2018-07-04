@@ -32,8 +32,17 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
             }
 
             login_ok_btn -> {
+                email = login_email_ed.text.toString()
+                password = login_pw_ed.text.toString()
                 login_ok_btn.isSelected = true
-                post()
+                if(email.length > 0 && password.length > 0) {
+                    post()
+                }
+                else
+                {
+                    Toast.makeText(applicationContext,"정보를 모두 입력해주세요.",Toast.LENGTH_SHORT).show()
+                    login_ok_btn.isSelected = false
+                }
             }
 
             login_auto_txt -> {
@@ -64,8 +73,6 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
 
     fun post()
     {
-        email = login_email_ed.text.toString()
-        password = login_pw_ed.text.toString()
         System.out.println(email + "하고" + password)
 
         var data = PostLogin(email,password)
@@ -84,14 +91,17 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
                     {
                         var intent = Intent(applicationContext,MainActivity::class.java)
                         startActivity(intent)
+                        finish()
                     }
                     else if(message.message.equals("wrong password"))
                     {
                         Toast.makeText(applicationContext,"비밀번호가 틀렸습니다",Toast.LENGTH_SHORT).show()
+                        login_ok_btn.isSelected = false
                     }
                     else if(message.message.equals("wrong email"))
                     {
                         Toast.makeText(applicationContext,"이메일이 틀렸습니다",Toast.LENGTH_SHORT).show()
+                        login_ok_btn.isSelected = false
                     }
                 }
             }

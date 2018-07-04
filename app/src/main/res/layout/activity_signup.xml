@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -40,6 +45,7 @@
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanscjkkr_bold"
             android:textSize="14sp"
             android:text="중복확인"/>
     </RelativeLayout>
@@ -51,6 +57,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorinfo"
         android:textSize="12sp"
+        android:fontFamily="@font/notosanscjkkr_regular"
         android:text="영문자,숫자 조합 7글자 이상 입력해주세요."/>
 
     <TextView
@@ -77,6 +84,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorinfo"
         android:textSize="12sp"
+        android:fontFamily="@font/notosanscjkkr_regular"
         android:text="영문자,숫자 조합 7글자 이상 입력해주세요."/>
 
     <TextView
@@ -104,6 +112,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorinfo"
         android:textSize="12sp"
+        android:fontFamily="@font/notosanscjkkr_regular"
         android:text="영문자,숫자 조합 7글자 이상 입력해주세요."/>
     <TextView
         android:layout_width="wrap_content"
@@ -129,6 +138,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorinfo"
         android:textSize="12sp"
+        android:fontFamily="@font/notosanscjkkr_regular"
         android:text="영문자,숫자 조합 7글자 이상 입력해주세요."/>
 
     <ImageButton
@@ -140,3 +150,4 @@
         android:background="@android:color/transparent"
         android:src="@drawable/signup_btn"/>
 </LinearLayout>
+</ScrollView>

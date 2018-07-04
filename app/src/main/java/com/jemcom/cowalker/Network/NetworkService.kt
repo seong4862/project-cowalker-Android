@@ -1,5 +1,6 @@
 package com.jemcom.cowalker.Network
 
+import com.jemcom.cowalker.Network.Get.Response.GetSignupResponse
 import com.jemcom.cowalker.Network.Post.PostLogin
 import com.jemcom.cowalker.Network.Post.PostSignup
 import com.jemcom.cowalker.Network.Post.Response.PostLoginResponse
@@ -14,10 +15,10 @@ interface NetworkService {
             @Body signup: PostSignup
     ): Call<PostSignupResponse>
 
-    @POST("/api/signup/check/{email}")
-    fun postSignupCheck(
-            @Path("email") email : String
-    ) : Call<PostSignupResponse>
+    @GET("/api/signup/check")
+    fun getSignupCheck(
+            @Query("email") email : String
+    ) : Call<GetSignupResponse>
 
     @POST("/api/signin")
     fun postLogin(
