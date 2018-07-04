@@ -11,21 +11,18 @@ import com.jemcom.cowalker.R;
 public class ListViewHolder extends RecyclerView.ViewHolder {
 
     public LinearLayout listLayout;
-    public TextView itemDate, itemTitle, itemType;
-    public ImageView itemBackground, itemProfile1, itemProfile2, itemProfile3;
+    public TextView itemTitle, itemPurpose, itemField, itemLocation;
+    public ImageView itemBackground;
 
 
     public ListViewHolder(final View itemView) {
         super(itemView);
         listLayout = (LinearLayout) itemView.findViewById(R.id.layout_promise_list);
-        itemDate = (TextView) itemView.findViewById(R.id.item_date_tv);
         itemTitle = (TextView) itemView.findViewById(R.id.item_title_tv);
-        itemType = (TextView) itemView.findViewById(R.id.item_location_tv);
-
+        itemPurpose = (TextView) itemView.findViewById(R.id.item_purpose_tv);
+        itemField = (TextView) itemView.findViewById(R.id.item_field_tv);
+        itemLocation = (TextView) itemView.findViewById(R.id.item_location_tv);
         itemBackground = (ImageView) itemView.findViewById(R.id.item_background_image);
-        itemProfile1 = (ImageView) itemView.findViewById(R.id.item_profile1_image);
-        itemProfile2 = (ImageView) itemView.findViewById(R.id.item_profile2_image);
-        itemProfile3 = (ImageView) itemView.findViewById(R.id.item_profile3_image);
 
     }
 

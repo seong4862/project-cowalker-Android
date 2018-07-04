@@ -19,7 +19,7 @@ import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
+    //test
     private val FRAGMENT1 = 1
     private val FRAGMENT2 = 2
     private val FRAGMENT4 = 4

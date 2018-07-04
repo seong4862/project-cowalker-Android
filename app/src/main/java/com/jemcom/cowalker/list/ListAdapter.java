@@ -1,7 +1,6 @@
 package com.jemcom.cowalker.list;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -48,22 +47,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListViewHolder> {
 
     public void onBindViewHolder(ListViewHolder holder, int position) {
 
-        int i=0;
-        String RoomTitle[] = new String[50];
-        RoomTitle[i] = arrayListOfListData.get(position).getTitle();
-        Log.v("logtest", "방 제목 = " + RoomTitle);
-        holder.itemDate.setText(arrayListOfListData.get(position).getDate());
         holder.itemTitle.setText(arrayListOfListData.get(position).getTitle());
-        holder.itemType.setText(arrayListOfListData.get(position).getType());
-
-        holder.itemBackground.setImageResource(arrayListOfListData.get(position).post_imgUrl);
-
-        // default 이미지 적용 중
-        holder.itemProfile1.setImageResource(R.drawable.invite_plus_btn);
-        holder.itemProfile2.setImageResource(R.drawable.invite_plus_btn);
-        holder.itemProfile3.setImageResource(R.drawable.invite_plus_btn);
-
-
+        holder.itemPurpose.setText(arrayListOfListData.get(position).getPurpose());
+        holder.itemField.setText(arrayListOfListData.get(position).getField());
+        holder.itemLocation.setText(arrayListOfListData.get(position).getLocation());
+        holder.itemBackground.setImageResource(arrayListOfListData.get(position).project_bgUrl);
     }
 
     @Override

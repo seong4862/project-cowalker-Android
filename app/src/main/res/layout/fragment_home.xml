@@ -12,7 +12,8 @@
         android:text="멋진 멤버들과 함께 여행을 떠나보세요."
         android:textSize="16sp"
         android:gravity="center_vertical"
-        android:layout_marginLeft="17dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#666666"
         android:textStyle="bold"/>
 
     <android.support.v7.widget.RecyclerView

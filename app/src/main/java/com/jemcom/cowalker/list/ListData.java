@@ -1,56 +1,38 @@
 package com.jemcom.cowalker.list;
 
-import com.google.gson.annotations.SerializedName;
-
 public class ListData{
 
-    @SerializedName("date")
-    private String post_date;
-    @SerializedName("title")
-    private String post_title;
-    @SerializedName("type")
-    private String post_type;
 
-    public int post_imgUrl;
-    public int profile1, profile2, profile3;
+    public int project_bgUrl;
+    private String project_title, project_purpose, project_field, project_location;
 
-
-    public ListData(String post_title, String post_date, String post_type, int post_imgUrl, int profile1, int profile2, int profile3){
-        this.post_title = post_title;
-        this.post_date = post_date;
-        this.post_type = post_type;
-        this.post_imgUrl = post_imgUrl;
-        this.profile1 = profile1;
-        this.profile2 = profile2;
-        this.profile3 = profile3;
+    public ListData(String project_title, String project_purpose, String project_field, String project_location, int project_bgUrl){
+        this.project_title = project_title;
+        this.project_purpose = project_purpose;
+        this.project_field = project_field;
+        this.project_location = project_location;
+        this.project_bgUrl = project_bgUrl;
     }
 
     public String getTitle(){
-        return post_title;
+        return project_title;
     }
 
-    public String getDate(){
-        return post_date;
+    public String getPurpose(){
+        return project_purpose;
     }
 
-    public String getType(){
-        return post_type;
+    public String getField(){
+        return project_field;
     }
 
-    public int getImgUrl(){
-        return post_imgUrl;
+
+    public String getLocation(){
+        return project_location;
     }
 
-    public int getProfile1(){
-        return profile1;
-    }
-
-    public int getProfile2(){
-        return profile2;
-    }
-
-    public int getProfile3(){
-        return profile3;
+    public int getProjectBgUrl(){
+        return project_bgUrl;
     }
 
 
