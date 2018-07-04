@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.jemcom.cowalker.MainActivity
@@ -31,6 +32,11 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
                 startActivity(intent)
             }
 
+            login_nonmem_tv -> {
+                val intent= Intent(applicationContext, MainActivity::class.java)
+                startActivity(intent)
+            }
+
             login_ok_btn -> {
                 login_ok_btn.isSelected = true
                 post()
@@ -47,6 +53,8 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
                     login_auto_txt.setTextColor(Color.parseColor("#c5c5c5"))
                 }
             }
+
+
         }
     }
 
@@ -58,6 +66,7 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
         login_auto_txt.setOnClickListener(this)
         login_ok_btn.setOnClickListener(this)
         login_signup_btn.setOnClickListener(this)
+        login_nonmem_tv.setOnClickListener(this)
 
         networkService = ApplicationController.instance.networkSerVice
     }

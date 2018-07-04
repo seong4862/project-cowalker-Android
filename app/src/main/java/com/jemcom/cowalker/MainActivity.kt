@@ -9,10 +9,7 @@ import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.ImageButton
-import com.jemcom.cowalker.fragment.HomeFragment
-import com.jemcom.cowalker.fragment.MypageFragment
-import com.jemcom.cowalker.fragment.NoticeTab
-import com.jemcom.cowalker.fragment.SearchFragment
+import com.jemcom.cowalker.fragment.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
