@@ -1,14 +1,18 @@
 package com.jemcom.cowalker.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.jemcom.cowalker.Activity.Notice_messageActivity
 import com.jemcom.cowalker.Adapter.NewsAdapter
 import com.jemcom.cowalker.Item.NewsItem
 import com.jemcom.cowalker.R
+import kotlinx.android.synthetic.main.fragment_news.*
 import kotlinx.android.synthetic.main.fragment_news.view.*
 
 class NewsTab : Fragment(), View.OnClickListener {
@@ -16,7 +20,12 @@ class NewsTab : Fragment(), View.OnClickListener {
     var newsItems : ArrayList<NewsItem> = ArrayList()
     lateinit var newsAdapter : NewsAdapter
 
-    override fun onClick(p0: View?) {
+    override fun onClick(v: View?) {
+                var idx : Int = news_rv.getChildAdapterPosition(v)
+                var intent = Intent(v!!.context, Notice_messageActivity::class.java)
+                intent.putExtra("position",idx)
+        Log.d("idx", idx.toString())
+                startActivity(intent)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

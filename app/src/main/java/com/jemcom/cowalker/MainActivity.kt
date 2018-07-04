@@ -9,7 +9,14 @@ import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.ImageButton
-import com.jemcom.cowalker.fragment.*
+
+import com.jemcom.cowalker.fragment.HomeFragment
+import com.jemcom.cowalker.fragment.MypageFragment
+import com.jemcom.cowalker.fragment.NoticeTab
+import com.jemcom.cowalker.fragment.SearchFragment
+import android.widget.Toast
+
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -17,13 +24,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val FRAGMENT2 = 2
     private val FRAGMENT4 = 4
     private val FRAGMENT5 = 5
-    internal var locationManager: LocationManager? = null
     private var homeTabBtn: ImageButton? = null
     private var searchTabBtn: ImageButton? = null
     private var createTabBtn: ImageButton? = null
     private var alarmTabBtn: ImageButton? = null
     private var mypageTabBtn: ImageButton? = null
-    internal var myToolbar: Toolbar? = null
+    val FINISH_INTERVAL_TIME = 2000
+    var backPressedTime : Long = 0
+
+
+    override fun onBackPressed() {
+        var tempTime = System.currentTimeMillis()
+        var intervalTime = tempTime-backPressedTime
+
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime) {
+            super.onBackPressed()
+        } else {
+            backPressedTime = tempTime
+            Toast.makeText(applicationContext, "한번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
