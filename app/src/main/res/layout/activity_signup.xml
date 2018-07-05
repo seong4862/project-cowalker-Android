@@ -15,7 +15,7 @@
         android:textSize="26sp"
         android:textColor="@color/colorPrimaryDark"
         android:fontFamily="@font/notosanscjkkr_bold"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="46dp"
         android:text="@string/signup"
         />
@@ -34,12 +34,13 @@
         android:layout_width="269dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="46dp">
+
         <EditText
             android:id="@+id/signup_email_ed"
-            android:theme="@style/EditTextStyle"
             android:layout_width="269dp"
-            android:layout_height="39dp"
-            />
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:theme="@style/EditTextStyle" />
         <TextView
             android:id="@+id/signup_emailcheck_tv"
             android:layout_alignParentRight="true"
@@ -74,8 +75,9 @@
             android:layout_marginLeft="46dp"
             android:theme="@style/EditTextStyle"
             android:layout_width="269dp"
-            android:layout_height="39dp"
+            android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:textSize="14sp"
             />
     <TextView
         android:id="@+id/signup_pw_tv"
@@ -101,8 +103,9 @@
             android:layout_marginLeft="46dp"
             android:theme="@style/EditTextStyle"
             android:layout_width="269dp"
-            android:layout_height="39dp"
+            android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:textSize="14sp"
             />
 
     <TextView
@@ -128,26 +131,17 @@
             android:layout_marginLeft="46dp"
             android:theme="@style/EditTextStyle"
             android:layout_width="269dp"
-            android:layout_height="39dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
             />
 
-    <TextView
-        android:id="@+id/signup_name_tv"
-        android:layout_marginLeft="58dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorinfo"
-        android:textSize="12sp"
-        android:fontFamily="@font/notosanscjkkr_regular"
-        android:text="영문자,숫자 조합 7글자 이상 입력해주세요."/>
 
     <ImageButton
         android:id="@+id/signup_ok_btn"
-        android:layout_width="268dp"
-        android:layout_height="54dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/signup_btn"/>
+        android:src="@drawable/signup_btn" />
 </LinearLayout>
 </ScrollView>

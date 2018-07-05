@@ -22,10 +22,10 @@ import java.util.regex.Pattern
 class SignupActivity : AppCompatActivity(),View.OnClickListener {
 
     lateinit var networkService: NetworkService
-    lateinit var email : String
-    lateinit var password : String
-    lateinit var passwordck : String
-    lateinit var name : String
+    var email : String = ""
+    var password : String = ""
+    var passwordck : String = ""
+    var name : String = ""
     val Passwrod_PATTERN = "^(?=.*[a-zA-Z]+)(?=.*[!@#$%^*+=-]|.*[0-9]+).{7,16}$"
 
     override fun onClick(v: View?) {
@@ -74,7 +74,6 @@ class SignupActivity : AppCompatActivity(),View.OnClickListener {
 
         signup_email_tv.setVisibility(View.INVISIBLE)
         signup_pwcheck_tv.setVisibility(View.INVISIBLE)
-        signup_name_tv.setVisibility(View.INVISIBLE)
 
         signup_emailcheck_tv.setOnClickListener(this)
         signup_ok_btn.setOnClickListener(this)

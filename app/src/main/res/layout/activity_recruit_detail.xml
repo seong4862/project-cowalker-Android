@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="모집 보기"
+            android:textColor="#000000"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="302dp"
+                android:layout_marginRight="21dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/scrap" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/scrap" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="306dp"
+                android:layout_marginRight="26dp"
+                android:text="추천"
+                android:textColor="#444444"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="23dp"
+                android:layout_height="18dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="20dp"
+                android:text="공유"
+                android:textColor="#444444"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:text="모집 역할"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="개발자"
+                android:textColor="#626262"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:text="모집 기간"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2018.07.01 ~ 2018.08.04"
+                android:textColor="#626262"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:text="모집 인원"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#626262"
+                android:text="3명"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="271dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="5dp"
+            android:text="활동"
+            android:textSize="14dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="250dp"
+            android:layout_marginBottom="19dp"
+            android:text="웹앱 서비스 개발"
+            android:textSize="12sp"
+            android:textColor="#626262"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginBottom="5dp"
+            android:text="필요 역량 및 기술"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="271dp"
+            android:layout_marginBottom="19dp"
+            android:text="node.js에 능해야 함"
+            android:textSize="12sp"
+            android:textColor="#626262"/>
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginBottom="5dp"
+            android:text="요구 경력 및 경험"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="250dp"
+            android:layout_marginBottom="1dp"
+            android:text="경력 무관
+앱 개발 프로젝트"
+            android:textSize="12sp"
+            android:textColor="#626262"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginBottom="5dp"
+            android:text="우대 사항"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="150dp"
+            android:layout_marginBottom="19dp"
+            android:text="이더리움 기반 암호화폐 개발 역량"
+            android:textSize="12sp"
+            android:textColor="#626262"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginBottom="5dp"
+            android:text="활동 기간 및 시간"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="271dp"
+            android:layout_marginBottom="19dp"
+            android:text="2018. 07.01 ~ 2018. 09.09 (주 3회 정기모임)"
+            android:textSize="12sp"
+            android:textColor="#626262"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginBottom="5dp"
+            android:text="혜택 및 보상"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="271dp"
+            android:layout_marginBottom="19dp"
+            android:text="상금 분배"
+            android:textSize="12sp"
+            android:textColor="#626262"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginBottom="5dp"
+            android:text="위치"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="271dp"
+            android:layout_marginBottom="19dp"
+            android:text="강남"
+            android:textSize="12sp"
+            android:textColor="#626262"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginBottom="5dp"
+            android:text="코멘트"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="271dp"
+            android:layout_marginBottom="19dp"
+            android:text="팀워크를 중시 여기며, 훌륭하고 열정적인 분과 함께하고 싶습니다."
+            android:textSize="12sp"
+            android:textColor="#626262"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_design">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:text="추천 멤버"
+                android:textColor="#868686"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="7"
+                android:textColor="#868686"/>
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/heart"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_design">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:text="지원 멤버"
+                android:textColor="#868686"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#868686"
+                android:text="5"/>
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/heart"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_design">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:text="참여 멤버"
+                android:textColor="#868686"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3"
+                android:textColor="#868686"/>
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/heart"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="330dp"
+            android:layout_height="56.24dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_design"
+            android:text="완료"
+            android:textSize="24dp"
+            android:textColor="#70DFFC"/>
+    </LinearLayout>
+</ScrollView>
