@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.jemcom.cowalker.R
 
-class HomeFragment : Fragment() {
+class HomeFragment2 : Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

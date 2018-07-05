@@ -3,10 +3,14 @@ package com.jemcom.cowalker;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -15,6 +19,9 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+
+
 
 public class ProjectCreate2Activity extends AppCompatActivity {
 
@@ -92,8 +99,8 @@ public class ProjectCreate2Activity extends AppCompatActivity {
         else if (requestCode == 2) {
 
             if (data != null) {
-
                 uri = data.getData();
+
 
                 ImageCropFunction();
 

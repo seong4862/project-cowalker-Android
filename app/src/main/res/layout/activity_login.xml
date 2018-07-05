@@ -111,6 +111,7 @@
             android:background="@color/colorPrimaryDark"/>
 
         <TextView
+            android:id="@+id/login_nonmem_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryDark"

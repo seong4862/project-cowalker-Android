@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.jemcom.cowalker.MainActivity
@@ -14,6 +15,8 @@ import com.jemcom.cowalker.Network.NetworkService
 import com.jemcom.cowalker.Network.Post.PostLogin
 import com.jemcom.cowalker.Network.Post.Response.PostLoginResponse
 import com.jemcom.cowalker.R
+import com.jemcom.cowalker.R.id.login_nonmem_tv
+import com.jemcom.cowalker.R.id.login_signup_btn
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,6 +34,11 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
         {
             login_signup_btn -> {
                 val intent= Intent(applicationContext, SignupActivity::class.java)
+                startActivity(intent)
+            }
+
+            login_nonmem_tv -> {
+                val intent= Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
             }
 
@@ -61,6 +69,8 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
                     auto=false
                 }
             }
+
+
         }
     }
 
@@ -72,6 +82,7 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener {
         login_auto_txt.setOnClickListener(this)
         login_ok_btn.setOnClickListener(this)
         login_signup_btn.setOnClickListener(this)
+        login_nonmem_tv.setOnClickListener(this)
 
         networkService = ApplicationController.instance.networkSerVice
         val pref = applicationContext.getSharedPreferences("auto",Activity.MODE_PRIVATE)

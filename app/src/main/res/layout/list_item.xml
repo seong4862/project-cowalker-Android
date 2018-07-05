@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_promise_list"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="154dp"
+    android:layout_height="222dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="154dp">
+
+        <ImageView
+            android:id="@+id/item_background_image"
+            android:layout_width="match_parent"
+            android:layout_height="154dp"
+            android:background="@drawable/default_img"
+            android:scaleType="fitXY"
+            android:layout_marginRight="12dp"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+
+
+        <TextView
+            android:id="@+id/item_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:text="제목"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:textStyle="bold"
+            android:textColor="#444444" />
+
+
+        <TextView
+            android:id="@+id/item_purpose_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_below="@+id/item_title_tv"
+            android:layout_marginBottom="10dp"
+            android:textSize="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="목적"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/item_point1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/item_purpose_tv"
+            android:textSize="10sp"
+            android:layout_below="@+id/item_title_tv"
+            android:layout_marginLeft="3dp"
+            android:text="·"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/item_field_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/item_title_tv"
+            android:layout_toRightOf="@+id/item_point1_tv"
+            android:textSize="10sp"
+            android:layout_marginLeft="3dp"
+            android:text="분야"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/item_point2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_below="@+id/item_title_tv"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/item_field_tv"
+            android:textSize="10sp"
+            android:layout_marginLeft="3dp"
+            android:text="·"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/item_location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/item_title_tv"
+            android:layout_toRightOf="@+id/item_point2_tv"
+            android:textSize="10sp"
+            android:layout_marginLeft="3dp"
+            android:text="장소"
+            android:textColor="#444444" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

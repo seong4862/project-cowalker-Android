@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.ImageButton
+
 import com.jemcom.cowalker.fragment.HomeFragment
 import com.jemcom.cowalker.fragment.MypageFragment
 import com.jemcom.cowalker.fragment.NoticeTab
@@ -18,7 +19,7 @@ import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
+    //test
     private val FRAGMENT1 = 1
     private val FRAGMENT2 = 2
     private val FRAGMENT4 = 4
