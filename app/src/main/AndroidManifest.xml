@@ -35,9 +35,18 @@
         <activity android:name=".Activity.SignupActivity" />
         <activity android:name=".Activity.Notice_messageActivity" />
         <activity android:name=".Activity.LoginActivity" />
-
-        <activity android:name=".Activity.MessageActivity"></activity>
-
+        <activity android:name=".Activity.MessageActivity" />
+        <activity
+            android:name=".Activity.JoinActivity"
+            android:label="@string/title_activity_join"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Activity.Main2Activity" />
+        <activity android:name=".Activity.MyPageActivity" />
+        <activity android:name=".Activity.MyPageOtherSeeActivity" />
+        <activity android:name=".Activity.ProfileEditActivity" />
+        <activity android:name=".Activity.ProjectIntroActivity" />
+        <activity android:name=".Activity.ProjectReaderActivity" />
+        <activity android:name=".Activity.RecruitDetailActivity"></activity>
     </application>
 
 </manifest>
