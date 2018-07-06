@@ -55,7 +55,6 @@ class JoinActivity : AppCompatActivity(), View.OnClickListener {
             override fun onFailure(call: Call<PostJoinResponse>?, t: Throwable?) {
                 Toast.makeText(applicationContext,"서버 연결 실패",Toast.LENGTH_SHORT).show()
             }
-
             override fun onResponse(call: Call<PostJoinResponse>?, response: Response<PostJoinResponse>?) {
                 if(response!!.isSuccessful)
                 {
