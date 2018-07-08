@@ -16,7 +16,7 @@
             android:layout_marginTop="7dp"
             android:layout_marginRight="19dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -51,7 +51,7 @@
             </RelativeLayout>
 
             <TextView
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="7dp"
                 android:layout_marginRight="1dp"
                 android:id="@+id/chatitem_preview_tv"
                 android:layout_width="match_parent"
@@ -59,7 +59,8 @@
                 android:textSize="13sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:fontFamily="@font/notosanscjkkr_regular"
-                android:text="새 소식이 왔습니다.">
+                android:text="새 소식이 왔습니다."
+                android:inputType="textMultiLine">
 
             </TextView>
         </LinearLayout>

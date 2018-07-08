@@ -1,9 +1,11 @@
 package com.jemcom.cowalker.Adapter
 
+import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.jemcom.cowalker.Holder.ChatViewHolder
 import com.jemcom.cowalker.Item.ChatItem
 import com.jemcom.cowalker.R
@@ -29,6 +31,8 @@ class ChatAdapter(private var chatItems : ArrayList<ChatItem>) : RecyclerView.Ad
 
     //데이터클래스와 뷰홀더를 이어준다.
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
+        if(chatItems[position].name.equals("나")) holder.chatName.setTextColor(Color.parseColor("#f8c930"))
+        else holder.chatName.setTextColor(Color.parseColor("#64dfff"))
         holder.chatName.text = chatItems[position].name
         holder.chatPreview.text = chatItems[position].preView
         holder.chatDate.text = chatItems[position].date

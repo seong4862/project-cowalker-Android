@@ -33,6 +33,7 @@ class JoinActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_join)
 
         networkService = ApplicationController.instance.networkSerVice
+        btn_join.setOnClickListener(this)
     }
 
     fun post()
@@ -49,7 +50,7 @@ class JoinActivity : AppCompatActivity(), View.OnClickListener {
         answers.add(join_answer2_ed.text.toString())
 
         var data = PostJoin(introduce,portfolio,recruit_idx,answers,phone)
-        var postJoinResponse = networkService.postJoin(token,data)
+        var postJoinResponse = networkService.postJoin("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NSwiaWF0IjoxNTMwNjM3MDI0LCJleHAiOjE1MzMyMjkwMjR9.jSBD1bP-TN8-LM7de-tVmzQrwQlf-fVy7BzhUvfPNq8",data)
 
         postJoinResponse.enqueue(object : Callback<PostJoinResponse>{
             override fun onFailure(call: Call<PostJoinResponse>?, t: Throwable?) {

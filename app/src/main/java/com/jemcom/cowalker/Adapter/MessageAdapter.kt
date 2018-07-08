@@ -4,11 +4,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.jemcom.cowalker.Holder.MessageViewHolder
 import com.jemcom.cowalker.Item.MessageItem
 import com.jemcom.cowalker.R
 
-class MessageAdapter(private var messageItems : ArrayList<MessageItem>) : RecyclerView.Adapter<MessageViewHolder>() {
+class MessageAdapter(private var messageItems : ArrayList<MessageItem>, var requestManager : RequestManager) : RecyclerView.Adapter<MessageViewHolder>() {
 
     private lateinit var onItemClick : View.OnClickListener
 
@@ -29,7 +30,7 @@ class MessageAdapter(private var messageItems : ArrayList<MessageItem>) : Recycl
 
     //데이터클래스와 뷰홀더를 이어준다.
     override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
-        holder.messageProfile.setImageResource(messageItems[position].profile)
+        requestManager.load(messageItems[position].profile).into(holder.messageProfile)
         holder.messageName.text = messageItems[position].name
         holder.messagePreview.text = messageItems[position].preView
         holder.messageDate.text = messageItems[position].date
